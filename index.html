@@ -2,7 +2,7 @@
 <html lang="fr"></html>
 <html>
   <head>
-    <title>Page HTML avec mot de passe</title>
+    <title>Page sécurisée</title>
   </head>
 
   <body>
@@ -13,11 +13,16 @@
         window.location.href = "index2.html";
 
 
-        const num=1
+      } 
+      if (password === "127") {
+        document.write("Accès autorisé");
+        window.location.href = "index4.html";
+      }
 
-      } else {
+
+      else {
         document.write("Accès refusé.");
-        const num=0
+
       }
 
 
