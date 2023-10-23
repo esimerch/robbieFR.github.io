@@ -1,0 +1,50 @@
+.container {
+    background-color: #2c3e50;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  }
+
+  body {
+    background-color: #2c3e50;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 0;
+  }
+  
+  a {
+    display: block;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #888888;
+  }
+  
+  a:hover {
+    background-color: #2980b9;
+  }
+  
+  .question-mark {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/012/174/061/original/3d-question-mark-free-png.png');
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+
+  .questionmark{
+    background-color: #ffffff;
+
+
+  }
