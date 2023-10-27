@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Moyenne</title>
+</head>
+
+<body>
+    <h1>Calcul de Moyenne</h1>
+    <form id="gradeForm">
+        <label for="qcm101">QCM 101:</label>
+        <input type="number" id="qcm101" step="1" required><br>
+
+        <label for="qcm101bis">QCM 101 BIS:</label>
+        <input type="number" id="qcm101bis" step="1" required><br>
+
+        <label for="qcm102">QCM 102:</label>
+        <input type="number" id="qcm102" step="1" required><br>
+
+        <label for="mds1">Ecrit MDS1:</label>
+        <input type="number" id="mds1" step="1" required><br>
+
+        <label for="qcm103">QCM 103:</label>
+        <input type="number" id="qcm103" step="1" required><br>
+
+        <label for="lean">TD Lean:</label>
+        <input type="number" id="lean" step="1" required><br>
+
+        <label for="qcm104">QCM 104:</label>
+        <input type="number" id="qcm104" step="1" required><br>
+
+        <label for="qcm105">QCM 105:</label>
+        <input type="number" id="qcm105" step="1" required><br>
+
+        <label for="mds2">Ecrit MDS2:</label>
+        <input type="number" id="mds2" step="1" required><br>
+
+        <button type="button" onclick="calculateGrade()">Calculer</button>
+    </form>
+
+    <h2>Résultat:</h2>
+    <p id="result"></p>
+
+    <script>
+        function calculateGrade() {
+            var qcm101 = parseFloat(document.getElementById("qcm101").value);
+            var qcm101bis = parseFloat(document.getElementById("qcm101bis").value);
+            var qcm102 = parseFloat(document.getElementById("qcm102").value);
+            var mds1 = parseFloat(document.getElementById("mds1").value);
+            var qcm103 = parseFloat(document.getElementById("qcm103").value);
+            var lean = parseFloat(document.getElementById("lean").value);
+            var qcm104 = parseFloat(document.getElementById("qcm104").value);
+            var qcm105 = parseFloat(document.getElementById("qcm105").value);
+            var mds2 = parseFloat(document.getElementById("mds2").value);
+
+            var moyQCM = (0.8 * Math.max(qcm101, qcm101bis) + 0.2 * Math.min(qcm101, qcm101bis) + qcm103 + 1.3 * (0.7 * Math.max(qcm104, qcm105) + 0.3 * Math.min(qcm104, qcm105))) / 3;
+            var moyMDS = (1.2 * Math.max(mds1, qcm102) + 0.8 * Math.min(mds1, qcm102) + 1.25 * mds2 + 0.75 * qcm105) / 2;
+            var moyLean = lean;
+            var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.3 * moyLean)*100/47;
+
+            document.getElementById("result").textContent = "Résultat: " + res.toFixed(2);
+        }
+    </script>
+</body>
+</html>
