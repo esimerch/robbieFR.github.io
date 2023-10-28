@@ -56,12 +56,12 @@
             var qcm105 = parseFloat(document.getElementById("qcm105").value);
             var mds2 = parseFloat(document.getElementById("mds2").value);
 
-            var moyQCM = (0.8 * Math.max(qcm101, qcm101bis) + 0.2 * Math.min(qcm101, qcm101bis) + qcm103 + 1.3 * (0.7 * Math.max(qcm104, qcm105) + 0.3 * Math.min(qcm104, qcm105))) / 3;
-            var moyMDS = (1.2 * Math.max(mds1, qcm102) + 0.8 * Math.min(mds1, qcm102) + 1.25 * mds2 + 0.75 * qcm105) / 2;
+            var moyQCM = (0.8 * Math.max(qcm101, qcm101bis) + 0.2 * Math.min(qcm101, qcm101bis) + qcm103 + 1.3 * (0.7 * Math.max(qcm104, qcm105) + 0.3 * Math.min(qcm104, qcm105) ) ) /(33/10);
+            var moyMDS = (1.2 * Math.max(mds1, qcm102) + 0.8 * Math.min(mds1, qcm102) + 1.25 * mds2 + 0.75 * qcm105) / 4;
             var moyLean = lean;
-            var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.3 * moyLean)*100/47;
+            var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.3 * moyLean) / (47/100);
 
-            document.getElementById("result").textContent = "Résultat: " + res.toFixed(2);
+            document.getElementById("result").textContent = "Résultat: " + res.toFixed(2) + "\n MoyQCM:" + moyQCM.toFixed(2) + " MoyMDS:" + moyMDS.toFixed(2) + " MoyTDM:" + moyLean.toFixed(2);
         }
     </script>
 </body>
