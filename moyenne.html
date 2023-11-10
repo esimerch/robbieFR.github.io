@@ -1,5 +1,8 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
     <meta charset="UTF-8">
@@ -13,35 +16,35 @@
     <h1>Calcul de Moyenne</h1>
     <form id="gradeForm">
         <label for="qcm101">QCM 101:</label>
-        <input type="number" id="qcm101" step="1" required><br>
+        <input type="number" id="qcm101" name="qcm101" step="1" required><br>
 
         <label for="qcm101bis">QCM 101 BIS:</label>
-        <input type="number" id="qcm101bis" step="1" required><br>
+        <input type="number" id="qcm101bis" name="qcm101bis" step="1" required><br>
 
         <label for="qcm102">QCM 102:</label>
-        <input type="number" id="qcm102" step="1" required><br>
+        <input type="number" id="qcm102" name="qcm102" step="1" required><br>
 
         <label for="mds1">Ecrit MDS1:</label>
-        <input type="number" id="mds1" step="1" required><br>
+        <input type="number" id="mds1" name="mds1" step="1" required><br>
 
         <label for="qcm103">QCM 103:</label>
-        <input type="number" id="qcm103" step="1" required><br>
+        <input type="number" id="qcm103" name="qcm103" step="1" required><br>
 
         <label for="lean">TDM Lean:</label>
-        <input type="number" id="lean" step="1" required><br>
+        <input type="number" id="lean" name="lean" step="1" required><br>
 
         <label for="qcm104">QCM 104:</label>
-        <input type="number" id="qcm104" step="1" required><br>
+        <input type="number" id="qcm104" name="qcm104" step="1" required><br>
 
         <label for="qcm105">QCM 105:</label>
-        <input type="number" id="qcm105" step="1" required><br>
+        <input type="number" id="qcm105" name="qcm105" step="1" required><br>
 
         <label for="mds2">Ecrit MDS2:</label>
-        <input type="number" id="mds2" step="1" required><br>
+        <input type="number" id="mds2" name="mds2" step="1" required><br>
 
 
         <label for="ds1">DS1:</label>
-        <input type="number" id="ds1" step="1" required><br>
+        <input type="number" id="ds1" name="ds1" step="1" required><br>
 
 
 
@@ -53,6 +56,46 @@
     <p id="result"></p>
 
     <script>
+
+        // Function to set a cookie with a given name and value
+        function setCookie(name, value) {
+            document.cookie = name + "=" + value + "; path=/";
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Function to save grades to cookies
+        function saveGradesToCookies() {
+            var inputs = document.querySelectorAll('input');
+            inputs.forEach(function (input) {
+                setCookie(input.name, input.value);
+            });
+        }
+
+        function loadGradesFromCookies() {
+        var inputs = document.querySelectorAll('input');
+        inputs.forEach(function (input) {
+        var value = getCookie(input.name);
+        if (value !== null) {
+            input.value = parseFloat(value); // Convert to number
+            }
+            });
+        }
+
+        // Call the loadGradesFromCookies function when the page loads
+        window.onload = loadGradesFromCookies;
+
+        // Your existing calculateGrade function
         function calculateGrade() {
             var qcm101 = parseFloat(document.getElementById("qcm101").value);
             var qcm101bis = parseFloat(document.getElementById("qcm101bis").value);
@@ -81,9 +124,12 @@ document.getElementById("result").textContent = "Résultat: " + res.toFixed(2) +
   }
 
             
-   
-            
+            saveGradesToCookies();
         }
     </script>
+
+
+
+    
 </body>
 </html>
