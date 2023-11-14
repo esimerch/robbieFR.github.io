@@ -115,11 +115,11 @@
             var moyDS = ds1;
 
 if (ds1 == -10) {
-    var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.3 * moyLean) / (47/100);
+    var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.1* moyLean) / (27/100);
 document.getElementById("result").textContent = "Résultat: " + res.toFixed(2) + " \n MoyQCM:" + moyQCM.toFixed(2) + " MoyMDS:" + moyMDS.toFixed(2) + " MoyTDM:" + moyLean.toFixed(2);
 
   } else {
-    var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.3 * moyLean + 0.3*moyDS) / (77/100);
+    var res = (0.07 * moyQCM + 0.1 * moyMDS + 0.1 * moyLean + 0.1*moyDS) / (37/100);
     document.getElementById("result").textContent = "Résultat: " + res.toFixed(2) + "\n MoyQCM:" + moyQCM.toFixed(2) + " MoyMDS:" + moyMDS.toFixed(2) + " MoyTDM:" + moyLean.toFixed(2) + " MoyDS:" + moyDS.toFixed(2) ;
   }
 
