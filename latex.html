@@ -1,38 +1,60 @@
+
 <!DOCTYPE html>
 <html>
- <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
-   <link rel="stylesheet" type="text/css" href="style.css" />
-   <title> titre </title>
-   <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
-   </script>
- </head>
-
-
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Titre</title>
+  <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+</head>
 
 <body>
+  <h1>Exemple d'utilisation du LaTeX en HTML</h1>
 
-<h1> Exemple d'utilisation du LaTeX en HTML</h1>
+  <br></br>
+  Soit $x \in \mathbf{R}$ tel que $\tan \left(\frac{x}{2}\right)$ et $\tan (x)$ existent. On pose $t=\tan \left(\frac{x}{2}\right) $
+  <br></br>
 
-<br></br>
-Soit $x \in \mathbf{R}$ tel que $\tan \left(\frac{x}{2}\right)$ et $\tan (x)$ existent. On pose $t=\tan \left(\frac{x}{2}\right) $
-<br></br>
+  <form id="quizForm">
+    <label><input type="radio" name="answer" value="1"> $\tan (x)=\frac{1-t^{2}}{1+t^{2}}$</label><br>
+    <label><input type="radio" name="answer" value="2"> $\tan (x)=\frac{2 t}{1-t^{2}}$</label> <!-- Bonne réponse --><br>
+    <label><input type="radio" name="answer" value="3"> $\tan (x)=\frac{1}{1+t^{2}}$</label><br>
+    <label><input type="radio" name="answer" value="4"> $\tan (x)=1+t^{2}$</label><br>
+    <label><input type="radio" name="answer" value="5"> $\tan (x)=\frac{2 t}{1+t^{2}}$</label><br>
+    <label><input type="radio" name="answer" value="6"> $\tan (x)=\frac{1}{1-t^{2}}$</label><br>
+    <label><input type="radio" name="answer" value="7"> $\tan (x)=2 t$</label><br>
+    <label><input type="radio" name="answer" value="8"> $\tan (x)=\frac{1+t^{2}}{2 t}$</label><br>
+    <label><input type="radio" name="answer" value="9"> $\tan (x)=\frac{1}{t^{2}}$</label><br>
+    <label><input type="radio" name="answer" value="10"> $\tan (x)=1-t^{2}$</label><br>
+    <label><input type="radio" name="answer" value="11"> $\tan (x)=\frac{1+t^{2}}{1-t^{2}}$</label><br>
+    <label><input type="radio" name="answer" value="12"> $\tan (x)=\frac{1-t^{2}}{2 t}$</label><br>
+    <label><input type="radio" name="answer" value="13"> $\tan (x)=\frac{t}{2}$</label><br>
+  </form>
 
-$\square \tan (x)=\frac{1-t^{2}}{1+t^{2}}$ <br>
-$\square \tan (x)=\frac{2 t}{1-t^{2}}$ <br>
-$\square \tan (x)=\frac{1}{1+t^{2}}$ <br>
-$\square \tan (x)=1+t^{2}$ <br>
-$\square \tan (x)=\frac{2 t}{1+t^{2}}$ <br>
-$\square \tan (x)=\frac{1}{1-t^{2}}$ <br>
-$\square \tan (x)=2 t$ <br>
-$\square \tan (x)=\frac{1+t^{2}}{2 t}$ <br>
-$\square \tan (x)=\frac{1}{t^{2}}$ <br>
-$\square \tan (x)=1-t^{2}$ <br>
-$\square \tan (x)=\frac{1+t^{2}}{1-t^{2}}$ <br>
-$\square \tan (x)=\frac{1-t^{2}}{2 t}$ <br>
-$\square \tan (x)=\frac{t}{2}$ <br>
+  <button type="button" onclick="validateAnswer()">Valider</button>
 
+  <script>
+    function validateAnswer() {
+      const correctAnswer = 2; // Index of the correct answer (1-based)
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
+      if (selectedAnswer) {
+        const selectedValue = parseInt(selectedAnswer.value);
+        selectedAnswer.disabled = true; // Disable the selected checkbox
+
+        if (selectedValue === correctAnswer) {
+          alert("Gagné");
+        } else {
+          alert("Perdu");
+        }
+        // Uncheck all radio buttons
+        const radioButtons = document.querySelectorAll('input[name="answer"]');
+        radioButtons.forEach(button => (button.checked = false));
+      } else {
+        alert("Veuillez sélectionner une réponse.");
+      }
+    }
+  </script>
 </body>
 </html>
