@@ -1,12 +1,51 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Titre</title>
-  <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js"></script>
+ <script type="text/javascript" src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+   </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .answer {
+      display: inline-block;
+      width: 48%; /* Ajuster la largeur selon vos préférences */
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    button {
+      display: block;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,19 +56,25 @@
   <br></br>
 
   <form id="quizForm">
-    <label><input type="radio" name="answer" value="1"> $\tan (x)=\frac{1-t^{2}}{1+t^{2}}$</label><br>
-    <label><input type="radio" name="answer" value="2"> $\tan (x)=\frac{2 t}{1-t^{2}}$</label> <!-- Bonne réponse --><br>
-    <label><input type="radio" name="answer" value="3"> $\tan (x)=\frac{1}{1+t^{2}}$</label><br>
-    <label><input type="radio" name="answer" value="4"> $\tan (x)=1+t^{2}$</label><br>
-    <label><input type="radio" name="answer" value="5"> $\tan (x)=\frac{2 t}{1+t^{2}}$</label><br>
-    <label><input type="radio" name="answer" value="6"> $\tan (x)=\frac{1}{1-t^{2}}$</label><br>
-    <label><input type="radio" name="answer" value="7"> $\tan (x)=2 t$</label><br>
-    <label><input type="radio" name="answer" value="8"> $\tan (x)=\frac{1+t^{2}}{2 t}$</label><br>
-    <label><input type="radio" name="answer" value="9"> $\tan (x)=\frac{1}{t^{2}}$</label><br>
-    <label><input type="radio" name="answer" value="10"> $\tan (x)=1-t^{2}$</label><br>
-    <label><input type="radio" name="answer" value="11"> $\tan (x)=\frac{1+t^{2}}{1-t^{2}}$</label><br>
-    <label><input type="radio" name="answer" value="12"> $\tan (x)=\frac{1-t^{2}}{2 t}$</label><br>
-    <label><input type="radio" name="answer" value="13"> $\tan (x)=\frac{t}{2}$</label><br>
+    <label class="answer"><input type="radio" name="answer" value="1"> $\tan (x)=\frac{1-t^{2}}{1+t^{2}}$</label>
+    <label class="answer"><input type="radio" name="answer" value="2"> $\tan (x)=\frac{2 t}{1-t^{2}}$</label> <!-- Bonne réponse --><br>
+
+    <label class="answer"><input type="radio" name="answer" value="3"> $\tan (x)=\frac{1}{1+t^{2}}$</label>
+    <label class="answer"><input type="radio" name="answer" value="4"> $\tan (x)=1+t^{2}$</label><br>
+
+    <label class="answer"><input type="radio" name="answer" value="5"> $\tan (x)=\frac{2 t}{1+t^{2}}$</label>
+    <label class="answer"><input type="radio" name="answer" value="6"> $\tan (x)=\frac{1}{1-t^{2}}$</label><br>
+
+    <label class="answer"><input type="radio" name="answer" value="7"> $\tan (x)=2 t$</label>
+    <label class="answer"><input type="radio" name="answer" value="8"> $\tan (x)=\frac{1+t^{2}}{2 t}$</label><br>
+
+    <label class="answer"><input type="radio" name="answer" value="9"> $\tan (x)=\frac{1}{t^{2}}$</label>
+    <label class="answer"><input type="radio" name="answer" value="10"> $\tan (x)=1-t^{2}$</label><br>
+
+    <label class="answer"><input type="radio" name="answer" value="11"> $\tan (x)=\frac{1+t^{2}}{1-t^{2}}$</label>
+    <label class="answer"><input type="radio" name="answer" value="12"> $\tan (x)=\frac{1-t^{2}}{2 t}$</label><br>
+
+    <label class="answer"><input type="radio" name="answer" value="13"> $\tan (x)=\frac{t}{2}$</label>
   </form>
 
   <button type="button" onclick="validateAnswer()">Valider</button>
@@ -51,6 +96,7 @@
         // Uncheck all radio buttons
         const radioButtons = document.querySelectorAll('input[name="answer"]');
         radioButtons.forEach(button => (button.checked = false));
+        radioButtons.forEach(button => (button.disabled = false)); // Re-enable all checkboxes
       } else {
         alert("Veuillez sélectionner une réponse.");
       }
