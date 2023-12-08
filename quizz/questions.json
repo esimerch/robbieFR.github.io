@@ -1,0 +1,52 @@
+[
+    {
+      "question": " $$ \\text{Soit }x \\in \\R  \\text{ tel que } \\tan \\left(\\frac{x}{2}\\right) \\text{ et } \\tan (x) \\text{ existent. On a : }$$",
+
+      "answers": [
+        {"text": " $$  \\ tan (x)= \\frac{1-t^{2}}{1+t^{2}} $$ ", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{2 t}{1-t^{2}}$$", "correct": true},
+        {"text": " $$  \\ tan (x)= \\frac{1}{1+t^{2}}$$", "correct": false},
+        {"text": " $$  \\ tan (x)=1+t^{2}$$", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{2 t}{1+t^{2}}$$", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{1}{1-t^{2}}$$", "correct": false},
+        {"text": " $$  \\ tan (x)=2 t$$", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{1+t^{2}}{2 t}$$", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{1}{t^{2}}$$", "correct": false},
+        {"text": " $$  \\ tan (x)=1-t^{2}$$", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{1+t^{2}}{1-t^{2}}$$", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{1-t^{2}}{2 t}$$ ", "correct": false},
+        {"text": " $$  \\ tan (x)= \\frac{t}{2}$$ ", "correct": false}
+      ]
+    },
+    {
+      "question": "What is 2+2 ?",
+      "answers": [
+        {"text": "1", "correct": false},
+        {"text": "2", "correct": false},
+        {"text": "3", "correct": false},
+        {"text": "4", "correct": true}
+      ]
+    },
+    {
+      "question": "What is 1*1 ?",
+      "answers": [
+        {"text": "1", "correct": true},
+        {"text": "2", "correct": false},
+        {"text": "3", "correct": false},
+        {"text": "4", "correct": false}
+      ]
+    },
+    {
+      "question": "What is 1*1 ?",
+      "answers": [
+        {"text": "1", "correct": true},
+        {"text": "2", "correct": false},
+        {"text": "3", "correct": false},
+        {"text": "4", "correct": false}
+      ]
+    }
+  ]
+  
+
+
+

@@ -1,0 +1,24 @@
+
+$$  - \\ frac{ \\ pi}{2}+ \\ arctan  \\ left(- \\ frac{5}{6} \\ right)$$
+$$  - \\ frac{ \\ pi}{2}+ \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
+$$  \\ pi+ \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
+$$  \\ frac{ \\ pi}{2}+ \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
+$$  \\ pi+ \\ arctan  \\ left(- \\ frac{5}{6} \\ right)$$
+$$  - \\ frac{ \\ pi}{2}- \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
+$$  \\ arctan  \\ left(- \\ frac{5}{5} \\ right)$$
+$$  -n+ \\ arctan  \\ left( \\ frac{5}{5} \\ right)$$
+
+
+{"text": " $$  \\ tan (x)= \\ frac{1-t^{2}}{1+t^{2}} $$ ", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{2 t}{1-t^{2}}$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{1}{1+t^{2}}$$", "correct": false},
+{"text": " $$  \\ tan (x)=1+t^{2}$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{2 t}{1+t^{2}}$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{1}{1-t^{2}}$$", "correct": false},
+{"text": " $$  \\ tan (x)=2 t$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{1+t^{2}}{2 t}$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{1}{t^{2}}$$", "correct": false},
+{"text": " $$  \\ tan (x)=1-t^{2}$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{1+t^{2}}{1-t^{2}}$$", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{1-t^{2}}{2 t}$$ ", "correct": false},
+{"text": " $$  \\ tan (x)= \\ frac{t}{2}$$ ", "correct": false},

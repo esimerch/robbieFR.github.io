@@ -1,66 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-body {
+* {
+  margin : 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: #b9b3a9;
-  display: flex;
-  justify-content: center;
+  box-sizing : border-box;
 }
 
-.container {
-  width: 450px;
-  padding: 20px;
-  margin-top: 80px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+body{
+  background : #7e74e2;
 }
 
-h1 {
-  text-align: center;
+.app{
+  background : #fff;
+  width: 90%;
+  max-width : 600px;
+  margin : 25px auto 25px;
+  border-radius : 10px;
+  padding : 30px;
 }
 
-.question {
-  font-weight: bold;
-  margin-bottom: 10px;
+.app h1{
+  font-size : 25px;
+  color : #001e4d;
+  font-weight : 600;
+  border-bottom : 1px solid #333;
+  padding-bottom : 30px;
 }
 
-.options {
-  margin-bottom: 20px;
+.quizz{
+  padding : 20px 0;
 }
 
-.option {
-  display: block;
-  margin-bottom: 10px;
+.quizz h2{
+  font-size : 18px;
+  color : #001e4d;
+  font-weight : 25;
 }
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #428bca;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  margin-right: 10px;
+.btn{
+  background: #fff;
+  color : #222;
+  font-weight : 500;
+  width : 45%;
+  height : 100px;
+  border : 1px solid #222;
+  padding : 10px;
+  margin : 10px 10px;
+  text-align : left;
+  border-radius : 20px;
+  cursor : pointer;
+  transition : all 0.3s;
 }
 
-.button:hover {
-  background-color: #3071a9;
+.btn:hover:not([disabled]){
+  background : #222;
+  color : #fff;
 }
 
-.result {
-  text-align: center;
-  margin-top: 20px;
-  font-weight: bold;
+.btn:disabled{
+  cursor : no-drop;
 }
 
-.submit {
+#next-btn{
+  background: #222;
+  color : #fff;
+  width : 150px;
+  font-weight : 500;
+  border : 1px solid #222;
+  padding : 10px;
+  margin : 20px auto 0;
   text-align : center;
+  border-radius : 4px;
+  cursor : pointer;
+  transition : all 0.3s;
+  display : none;
 }
 
-.hide{
-  display: none;
+#next-btn:hover{
+  background :#fff;
+  color :  #222;
+}
+
+.correct{
+  background : #9aeabc ;
+}
+
+.incorrect{
+  background : #ea9a9a ;
 }
