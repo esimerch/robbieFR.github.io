@@ -1,48 +1,89 @@
 [
     {
-      "question": " $$ \\text{Soit }x \\in \\R  \\text{ tel que } \\tan \\left(\\frac{x}{2}\\right) \\text{ et } \\tan (x) \\text{ existent. On a : }$$",
-
-      "answers": [
-        {"text": " $$  \\ tan (x)= \\frac{1-t^{2}}{1+t^{2}} $$ ", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{2 t}{1-t^{2}}$$", "correct": true},
-        {"text": " $$  \\ tan (x)= \\frac{1}{1+t^{2}}$$", "correct": false},
-        {"text": " $$  \\ tan (x)=1+t^{2}$$", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{2 t}{1+t^{2}}$$", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{1}{1-t^{2}}$$", "correct": false},
-        {"text": " $$  \\ tan (x)=2 t$$", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{1+t^{2}}{2 t}$$", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{1}{t^{2}}$$", "correct": false},
-        {"text": " $$  \\ tan (x)=1-t^{2}$$", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{1+t^{2}}{1-t^{2}}$$", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{1-t^{2}}{2 t}$$ ", "correct": false},
-        {"text": " $$  \\ tan (x)= \\frac{t}{2}$$ ", "correct": false}
-      ]
-    },
-    {
-      "question": "What is 2+2 ?",
-      "answers": [
-        {"text": "1", "correct": false},
-        {"text": "2", "correct": false},
-        {"text": "3", "correct": false},
-        {"text": "4", "correct": true}
-      ]
-    },
-    {
-      "question": "What is 1*1 ?",
-      "answers": [
-        {"text": "1", "correct": true},
-        {"text": "2", "correct": false},
-        {"text": "3", "correct": false},
-        {"text": "4", "correct": false}
-      ]
-    },
-    {
-      "question": "What is 1*1 ?",
-      "answers": [
-        {"text": "1", "correct": true},
-        {"text": "2", "correct": false},
-        {"text": "3", "correct": false},
-        {"text": "4", "correct": false}
+      "QCM nb" : 101,
+      "date" : "11/09/23",
+      "content": [
+      {
+        "question" : "  Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\R, \\exists y \\in \\R, y>x  \\text{ OU } \\exists x \\in \\R, \\forall y \\in \\R, y>x $$",
+        "answers": [
+          {"text": " $$  = $$ ", "correct": false},
+          {"text": " $$  \\exists $$", "correct": false},
+          {"text": " $$  \\Longleftrightarrow $$", "correct": false},
+          {"text": " $$  \\forall $$", "correct": false},
+          {"text": " $$  \\in $$", "correct": false},
+          {"text": " $$  \\gt $$", "correct": false},
+          {"text": " $$ \\text{OU} $$ ", "correct": true}
+        ]
+      },
+      {
+        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$\\forall x \\in Z, 3 x+2 \\geqslant 0 \\Longrightarrow x \\geqslant-1$$",
+        "answers": [
+          {"text": " $$ \\forall $$ ", "correct": true},
+          {"text": " $$  \\exists $$", "correct": false},
+          {"text": " $$  \\in $$", "correct": false},
+          {"text": " $$ \\Longrightarrow  $$", "correct": false},
+          {"text": " $$  + $$", "correct": false},
+          {"text": " $$  \\geq $$", "correct": false},
+          {"text": " $$ \\Longleftrightarrow $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\N,(\\exists y \\in \\N, y>x) \\Longleftrightarrow(\\exists z \\in \\N, z \\geqslant x+1) $$ ",
+        "answers": [
+          {"text": " $$ \\geqslant $$ ", "correct": false},
+          {"text": " $$ \\Leftrightarrow $$ ", "correct": false},
+          {"text": " $$ \\exists $$ ", "correct": false},
+          {"text": " $$ \\gt $$ ", "correct": false},
+          {"text": " $$ \\forall $$ ", "correct": true},
+          {"text": " $$ \\Longrightarrow $$ ", "correct": false},
+          {"text": " $$ \\in $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\left(\\forall x \\in E, x^{2} \\geq 0\\right) \\Longrightarrow \\left(\\forall x \\in E, x^{2}-4x+6>0\\right) $$ ",
+        "answers": [
+          {"text": " $$ \\Longrightarrow $$ ", "correct": true},
+          {"text": " $$ \\geq $$ ", "correct": false},
+          {"text": " $$ \\gt  $$ ", "correct": false},
+          {"text": " $$ \\forall $$ ", "correct": false},
+          {"text": " $$ = $$ ", "correct": false},
+          {"text": " $$ \\Longleftrightarrow $$ ", "correct": false},
+          {"text": " $$ \\in $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ f(x) $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": true},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ f(x) \\leqslant 0 \\Longleftrightarrow x \\geq 1 $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": true},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ f(x) \\text{ est croissante } $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": true},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      }
       ]
     }
   ]
