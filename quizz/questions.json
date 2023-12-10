@@ -6,17 +6,17 @@
       {
         "question" : "  Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\R, \\exists y \\in \\R, y>x  \\text{ OU } \\exists x \\in \\R, \\forall y \\in \\R, y>x $$",
         "answers": [
-          {"text": " $$  = $$ ", "correct": false},
-          {"text": " $$  \\exists $$", "correct": false},
-          {"text": " $$  \\Longleftrightarrow $$", "correct": false},
-          {"text": " $$  \\forall $$", "correct": false},
-          {"text": " $$  \\in $$", "correct": false},
-          {"text": " $$  \\gt $$", "correct": false},
-          {"text": " $$ \\text{OU} $$ ", "correct": true}
+          {"text": " $$  \\huge =  $$ ", "correct": false},
+          {"text": " $$  \\huge \\exists $$", "correct": false},
+          {"text": " $$  \\huge \\Longleftrightarrow $$", "correct": false},
+          {"text": " $$  \\huge \\forall $$", "correct": false},
+          {"text": " $$  \\huge \\in $$", "correct": false},
+          {"text": " $$  \\huge \\gt $$", "correct": false},
+          {"text": " $$ \\LARGE \\text{OU} $$ ", "correct": true}
         ]
       },
       {
-        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$\\forall x \\in Z, 3 x+2 \\geqslant 0 \\Longrightarrow x \\geqslant-1$$",
+        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$\\forall x \\in \\Z, 3 x+2 \\geqslant 0 \\Longrightarrow x \\geqslant-1$$",
         "answers": [
           {"text": " $$ \\forall $$ ", "correct": true},
           {"text": " $$  \\exists $$", "correct": false},
@@ -82,6 +82,95 @@
           {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
           {"text": " $$ \\text{Incorrect} $$ ", "correct": true},
           {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ f' $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": true},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ x=1 \\text{ OU } x=2 $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": true},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+        
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ \\forall x \\in \\R, f(x)=0 \\Rightarrow x=1 \\text{ OU } x=2 $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": true},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ \\exists k \\in \\N, k>x $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": true},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ \\{ y \\in \\R \\text{|} \\forall t \\in \\R, f(t \\sin (y)) \\leq x \\} $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": true},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ \\forall t \\in \\R, f(t) \\leqslant M $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": false},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": true},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Dans les questions suivantes, x désigne un nombre réel et f une application de ℝ dans ℝ dérivable, Identifiez le type de l'objet proposé. Cochez \"Incorrect\" en cas d'erreur de syntaxe, de typage, de symbole non defini, d'ériture ambigue. $$ \\sum_{k=1}^{5} k^{2} $$ ",
+        "answers": [
+          {"text": " $$ \\text{Nombre} $$ ", "correct": true},
+          {"text": " $$ \\text{Fonction} $$ ", "correct": false},
+          {"text": " $$ \\text{Assertion} $$ ", "correct": false},
+          {"text": " $$ \\text{Ensemble} $$ ", "correct": false},
+          {"text": " $$ \\text{Incorrect} $$ ", "correct": false},
+          {"text": " $$ \\text{Autre} $$ ", "correct": false}
+        ]
+      },
+      {
+        "question": " Identifiez les variables Iibres dans l'assertion suivante: $$ \\exists a \\in \\R, \\varnothing \\text{ /= }   \\left \\{b \\in \\R \\mid \\forall x \\in \\R, \\int_{y}^{x} \\frac{f(x t)+e^{-t}}{1+x^{2}+t^{2}} \\mathrm{~d} t \\leqslant b \\right \\} $$",
+        "answers": [
+          {"text": " $$ y $$ ", "correct": true},
+          {"text": " $$ x $$ ", "correct": false},
+          {"text": " $$ a $$ ", "correct": false},
+          {"text": " $$ t $$", "correct": false},
+          {"text": " $$ b $$ ", "correct": false},
+          {"text": " $$ f $$ ", "correct": true}
         ]
       }
       ]

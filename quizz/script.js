@@ -9,10 +9,11 @@ fetch('questions.json')
   .then(response => response.json())
   .then(data => {
     questions = data;
-    console.log(questions);
+    //console.log(questions);
     //console.log(questions.length);  //1 
     //console.log(questions[0].content[0].answers.length);
     console.log("Nb de questions : " + questions[0].content.length);
+    showIndex();
     renderMathInElement(document.body);
     startQuizz(); // Call startQuizz only when questions are loaded
   })
@@ -24,7 +25,21 @@ fetch('questions.json')
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-const skipButton = document.getElementById("skip-btn");
+const indexButton = document.getElementById("index-btn");
+
+/*
+skipButton.addEventListener("click", ()=>{                                       //debug
+  var questionDemandee = prompt("A quelle question voulez-vous aller ? (UN CHIFFRE SINON CA CRASH)");
+  questionDemandee = parseInt(questionDemandee);  //str to int
+  console.log(isNumber(questionDemandee));
+  if( isNumber(questionDemandee) ){
+    currentQuestionIndex = questionDemandee -1 ;  // -1 for the index (ie : question 4 is index 3)
+    showQuestion();
+  }
+});
+
+*/
+
 
 function renderMath() {
   MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
@@ -43,7 +58,7 @@ function showQuestion(){
   let questionNo = currentQuestionIndex + 1;
   //console.log(currentQuestion.answers[1]);
   questionElement.innerHTML = "Question n°" + questionNo + ": "+ currentQuestion.question;
-  console.log(currentQuestion.answers);
+  //console.log(currentQuestion.answers);
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
@@ -63,10 +78,57 @@ function resetState(){
   while(answerButtons.firstChild){
     answerButtons.removeChild(answerButtons.firstChild);
   }
+
 }
 
+function showIndex(){
+  for (let i=0; i < questions[0].content.length; i++){
+    const index = document.createElement("button");
+    index.innerHTML = " ‎ " + (i+1) + " ‎ " ;
+    index.classList.add("index")
+    index.dataset.index = i + 1;
+    indexButton.addEventListener("click", goToIdex);
+
+
+    index.style.height = "30px";
+    index.style.width = "30px";
+    index.style.border = "1px solid black";
+    index.style.borderRadius = "10px";
+
+
+    indexButton.appendChild(index);
+  }
+  
+}
+
+function goToIdex(event){
+  const clickedButton = event.target;
+  var questionDemandee = parseInt(clickedButton.dataset.index, 10);
+  currentQuestionIndex = questionDemandee -1
+  showQuestion();
+}
+
+
+
 function selectAnswer(e){
-  const selectedBtn = e.target;
+  var i=0;
+  console.log(e);
+  console.log(e.target.className);
+  var location = e.target;
+  //location = e.target;
+  //console.log(location.className);
+  //console.log(e.target.parentElement.className);
+  //console.log(e.target.parentElement.parentElement.className);
+
+  
+  while( location.className != "btn" ){
+    i=i+1;
+    console.log(i + " " + e.target.className);
+    location = location.parentElement;
+  };
+  
+
+  const selectedBtn = location; //e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
   if(isCorrect){
     selectedBtn.classList.add("correct");
@@ -114,15 +176,7 @@ function isNumber(value) {
   return typeof value === 'number';
 }
 
-skipButton.addEventListener("click", ()=>{                                       //debug
-  var questionDemandee = prompt("A quelle question voulez-vous aller ? (UN CHIFFRE SINON CA CRASH)");
-  questionDemandee = parseInt(questionDemandee);  //str to int
-  console.log(isNumber(questionDemandee));
-  if( isNumber(questionDemandee) ){
-    currentQuestionIndex = questionDemandee -1 ;  // -1 for the index (ie : question 4 is index 3)
-    showQuestion();
-  }
-});
+
 
 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"    //func for rendering maths with katex
 function latex(){
