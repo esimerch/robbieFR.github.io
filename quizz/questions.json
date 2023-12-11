@@ -4,7 +4,7 @@
       "date" : "11/09/23",
       "content": [
       {
-        "question" : "  Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\R, \\exists y \\in \\R, y>x  \\text{ OU } \\exists x \\in \\R, \\forall y \\in \\R, y>x $$",
+        "question" : "  llIdentiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\R, \\exists y \\in \\R, y>x  \\text{ OU } \\exists x \\in \\R, \\forall y \\in \\R, y>x $$",
         "answers": [
           {"text": " $$  \\huge =  $$ ", "correct": false},
           {"text": " $$  \\huge \\exists $$", "correct": false},
