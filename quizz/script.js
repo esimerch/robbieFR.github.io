@@ -64,6 +64,18 @@ function showQuestion(){
     button.innerHTML = answer.text;
     button.classList.add("btn")
     answerButtons.appendChild(button);
+    
+    if (answer.text.match(/[\\]/g) != null){
+      //console.log(answer.text.match(/[\\]/g).length); //logs 3
+      var buttonSize = answer.text.match(/[\\]/g).length;
+      if(buttonSize<=4){
+        button.style.width = "100px";
+      }else{
+        button.style.width = "510px";
+        console.log("child");
+      }
+    };
+
     renderMathInElement(document.body);
     if(answer.correct){
       button.dataset.correct = answer.correct;
@@ -147,7 +159,13 @@ function selectAnswer(e){
 
 function showScore(){
   resetState();
-  questionElement.innerHTML = `Votre note : $$ ${score} / ${questions[0].content.length} $$`;
+  var note = score/questions[0].content.length
+  if ( note == 12 || note == 13 ){
+    questionElement.innerHTML = `$$ ${score} / ${questions[0].content.length} $$ `+ `Votre note : $$ ≈\\pi/4 $$`;
+  }else{
+    questionElement.innerHTML = `Votre note : $$ ${score} / ${questions[0].content.length} $$`;
+  }
+
   renderMathInElement(document.body);
   nextButton.innerHTML = "Play again";
   nextButton.style.display = "block";

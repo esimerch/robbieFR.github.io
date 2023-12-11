@@ -4,7 +4,7 @@
       "date" : "11/09/23",
       "content": [
       {
-        "question" : "  Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\R, \\exists y \\in \\R, y>x  \\text{ OU } \\exists x \\in \\R, \\forall y \\in \\R, y>x $$",
+        "question" : "  Identifiez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\R, \\exists y \\in \\R, y>x  \\text{ OU } \\exists x \\in \\R, \\forall y \\in \\R, y>x $$",
         "answers": [
           {"text": " $$  \\huge =  $$ ", "correct": false},
           {"text": " $$  \\huge \\exists $$", "correct": false},
@@ -16,39 +16,39 @@
         ]
       },
       {
-        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$\\forall x \\in \\Z, 3 x+2 \\geqslant 0 \\Longrightarrow x \\geqslant-1$$",
+        "question": " Identifiez le connecteur principal dans chaque assertion ci-dessous $$\\forall x \\in \\Z, 3 x+2 \\geqslant 0 \\Longrightarrow x \\geqslant-1$$",
         "answers": [
-          {"text": " $$ \\forall $$ ", "correct": true},
-          {"text": " $$  \\exists $$", "correct": false},
-          {"text": " $$  \\in $$", "correct": false},
-          {"text": " $$ \\Longrightarrow  $$", "correct": false},
-          {"text": " $$  + $$", "correct": false},
-          {"text": " $$  \\geq $$", "correct": false},
-          {"text": " $$ \\Longleftrightarrow $$ ", "correct": false}
+          {"text": " $$ \\huge \\forall $$ ", "correct": true},
+          {"text": " $$  \\huge \\exists $$", "correct": false},
+          {"text": " $$  \\huge \\in $$", "correct": false},
+          {"text": " $$ \\huge \\Longrightarrow  $$", "correct": false},
+          {"text": " $$ \\huge \\text{+} $$", "correct": false},
+          {"text": " $$  \\huge \\geq $$", "correct": false},
+          {"text": " $$ \\huge \\Longleftrightarrow $$ ", "correct": false}
         ]
       },
       {
-        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\N,(\\exists y \\in \\N, y>x) \\Longleftrightarrow(\\exists z \\in \\N, z \\geqslant x+1) $$ ",
+        "question": " Identifiez le connecteur principal dans chaque assertion ci-dessous $$ \\forall x \\in \\N,(\\exists y \\in \\N, y>x) \\Longleftrightarrow(\\exists z \\in \\N, z \\geqslant x+1) $$ ",
         "answers": [
-          {"text": " $$ \\geqslant $$ ", "correct": false},
-          {"text": " $$ \\Leftrightarrow $$ ", "correct": false},
-          {"text": " $$ \\exists $$ ", "correct": false},
-          {"text": " $$ \\gt $$ ", "correct": false},
-          {"text": " $$ \\forall $$ ", "correct": true},
-          {"text": " $$ \\Longrightarrow $$ ", "correct": false},
-          {"text": " $$ \\in $$ ", "correct": false}
+          {"text": " $$ \\huge \\geqslant $$ ", "correct": false},
+          {"text": " $$ \\huge \\Leftrightarrow $$ ", "correct": false},
+          {"text": " $$ \\huge \\exists $$ ", "correct": false},
+          {"text": " $$ \\huge \\gt $$ ", "correct": false},
+          {"text": " $$ \\huge \\forall $$ ", "correct": true},
+          {"text": " $$ \\huge \\Longrightarrow $$ ", "correct": false},
+          {"text": " $$ \\huge \\in $$ ", "correct": false}
         ]
       },
       {
-        "question": " Identiflez le connecteur principal dans chaque assertion ci-dessous $$ \\left(\\forall x \\in E, x^{2} \\geq 0\\right) \\Longrightarrow \\left(\\forall x \\in E, x^{2}-4x+6>0\\right) $$ ",
+        "question": " Identifiez le connecteur principal dans chaque assertion ci-dessous $$ \\left(\\forall x \\in E, x^{2} \\geq 0\\right) \\Longrightarrow \\left(\\forall x \\in E, x^{2}-4x+6>0\\right) $$ ",
         "answers": [
-          {"text": " $$ \\Longrightarrow $$ ", "correct": true},
-          {"text": " $$ \\geq $$ ", "correct": false},
-          {"text": " $$ \\gt  $$ ", "correct": false},
-          {"text": " $$ \\forall $$ ", "correct": false},
-          {"text": " $$ = $$ ", "correct": false},
-          {"text": " $$ \\Longleftrightarrow $$ ", "correct": false},
-          {"text": " $$ \\in $$ ", "correct": false}
+          {"text": " $$ \\huge \\Longrightarrow $$ ", "correct": true},
+          {"text": " $$ \\huge \\geq $$ ", "correct": false},
+          {"text": " $$ \\huge \\gt  $$ ", "correct": false},
+          {"text": " $$ \\huge \\forall $$ ", "correct": false},
+          {"text": " $$ \\huge \\text{=} $$ ", "correct": false},
+          {"text": " $$ \\huge \\Longleftrightarrow $$ ", "correct": false},
+          {"text": " $$ \\huge \\in $$ ", "correct": false}
         ]
       },
       {
@@ -163,32 +163,36 @@
         ]
       },
       {
-        "question": " Identifiez les variables Iibres dans l'assertion suivante: $$ \\exists a \\in \\R, \\varnothing  \\text{≠}  \\left \\{b \\in \\R \\mid \\forall x \\in \\R, \\int_{y}^{x} \\frac{f(x t)+e^{-t}}{1+x^{2}+t^{2}} \\mathrm{~d} t \\leqslant b \\right \\} $$",
+        "question": " Identifiez les variables Libres dans l'assertion suivante: $$ \\exists a \\in \\R, \\varnothing \\text{ = }  \\left \\{b \\in \\R \\mid \\forall x \\in \\R, \\int_{y}^{x} \\frac{f(x t)+e^{-t}}{1+x^{2}+t^{2}} \\mathrm{d} \\mathrm{t} \\leqslant \\mathrm{b} \\right \\} $$",
         "answers": [
-          {"text": " $$ y $$ ", "correct": true},
-          {"text": " $$ x $$ ", "correct": false},
-          {"text": " $$ a $$ ", "correct": false},
-          {"text": " $$ t $$", "correct": false},
-          {"text": " $$ b $$ ", "correct": false},
-          {"text": " $$ f $$ ", "correct": true}
+          {"text": " $$ \\huge y $$ ", "correct": true},
+          {"text": " $$ \\huge x $$ ", "correct": false},
+          {"text": " $$ \\huge a $$ ", "correct": false},
+          {"text": " $$ \\huge t $$", "correct": false},
+          {"text": " $$ \\huge b $$ ", "correct": false},
+          {"text": " $$ \\huge f $$ ", "correct": true}
         ]
       },
       {
-        "question": "$$ Soit x un nombre reel. Alors: $$",
+        "question": " Soit x un nombre reel. Alors: ",
         "answers": [
-          {"text": " $$ y $$ ", "correct": true},
-          {"text": " $$ x $$ ", "correct": false},
-          {"text": " $$ a $$ ", "correct": false},
-          {"text": " $$ t $$", "correct": false},
-          {"text": " $$ b $$ ", "correct": false},
-          {"text": " $$ f $$ ", "correct": true}
+          {"text": " $$ \\cos (x)=0  \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi \\text{ avec } k \\in \\Z $$ ", "correct": false},  
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi(k \\in \\Z) $$ ", "correct": false},   
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi, \\forall k \\in \\Z $$ ", "correct": false},  
+          {"text": " $$ \\text{Soit }   k \\in Z, \\cos (x)=0 \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi $$ ", "correct": false}, 
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à } \\mathrm{a} x=\\frac{\\pi}{2}+k \\pi \\text{ OU } k \\in Z $$ ", "correct": false},   
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à } \\exists k \\in \\Z, x=\\frac{\\pi}{2}+k \\pi $$ ", "correct": true},  
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à } \\forall k \\in \\Z x=\\frac{\\pi}{2}+k \\pi $$ ", "correct": false},  
+          {"text": " $$ \\forall k \\in \\Z, \\cos (x)=0 \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi $$ ", "correct": false},   
+          {"text": " $$ \\exists k \\in \\Z, \\cos (x)=0 \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi $$ ", "correct": false},   
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à Soit } k \\in \\Z, x=\\frac{\\pi}{2}+k \\pi $$ ", "correct": false},  
+          {"text": " $$ \\cos (x)=0 \\text{ équivaut à } x=\\frac{\\pi}{2}+k \\pi \\text{ pour } k \\in Z $$ ", "correct": false}
         ]
       }
-          
       ]
     }
   ]
   
+  
 
-
-
+    

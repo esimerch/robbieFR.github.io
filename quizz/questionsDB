@@ -1,24 +1,12 @@
-
-$$  - \\ frac{ \\ pi}{2}+ \\ arctan  \\ left(- \\ frac{5}{6} \\ right)$$
-$$  - \\ frac{ \\ pi}{2}+ \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
-$$  \\ pi+ \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
-$$  \\ frac{ \\ pi}{2}+ \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
-$$  \\ pi+ \\ arctan  \\ left(- \\ frac{5}{6} \\ right)$$
-$$  - \\ frac{ \\ pi}{2}- \\ arctan  \\ left( \\ frac{5}{6} \\ right)$$
-$$  \\ arctan  \\ left(- \\ frac{5}{5} \\ right)$$
-$$  -n+ \\ arctan  \\ left( \\ frac{5}{5} \\ right)$$
-
-
-{"text": " $$  \\ tan (x)= \\ frac{1-t^{2}}{1+t^{2}} $$ ", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{2 t}{1-t^{2}}$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{1}{1+t^{2}}$$", "correct": false},
-{"text": " $$  \\ tan (x)=1+t^{2}$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{2 t}{1+t^{2}}$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{1}{1-t^{2}}$$", "correct": false},
-{"text": " $$  \\ tan (x)=2 t$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{1+t^{2}}{2 t}$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{1}{t^{2}}$$", "correct": false},
-{"text": " $$  \\ tan (x)=1-t^{2}$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{1+t^{2}}{1-t^{2}}$$", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{1-t^{2}}{2 t}$$ ", "correct": false},
-{"text": " $$  \\ tan (x)= \\ frac{t}{2}$$ ", "correct": false},
+$$ \\cos (x)=0  equivaut à \\mathrm{d} x=\\frac{\\pi}{2}+k \\pi avec  k \\in \\Z $$   
+$$ \\cos (x)=0 $$  equivaut  $$ \\mathrm{A} x=\\frac{\\pi}{2}+k \\pi(k \\in Z) $$   
+$$ \\cos (x)=0 $$  equilvaut  $$ \\mathrm{a} x=\\frac{\\pi}{2}+k \\pi, \\forall k \\in Z $$  
+$$ Soit   k \\in Z, \\cos (x)=0 $$  équlmut à  $$ x=\\frac{\\pi}{2}+k \\pi $$   
+$$ \\cos (x)=0 $$   
+$$ \\cos (x)=0 $$  equivaut  $$ \\mathrm{a} x=\\frac{\\pi}{2}+k \\pi $$  ou  $$ k \\in Z $$   
+$$ \\cos (x)=0 $$  equivaut a  $$ a k c Z, x=\\frac{\\pi}{2}+k \\pi $$   
+$$ \\cos (x)=0 $$  equivaut  $$ A \\forall k \\in Z_3 x=\\frac{\\pi}{2}+k \\pi $$   
+$$ \\forall k \\in Z, \\cos (x)=0 $$  equivaut  $$ \\mathbf{a} x=\\frac{\\pi}{2}+k \\pi $$   
+$$ \\exists k \\in Z, \\cos (x)=0 $$  equilvaut a  $$ x=\\frac{\\pi}{2}+k \\pi $$   
+$$ \\cos (x)=0 $$  equivaut a Solt  $$ k \\in Z, x=\\frac{\\pi}{2}+k \\pi $$   
+$$ \\cos (x)=0 $$  équivaut  $$ \\mathrm{A} x=\\frac{\\pi}{2}+k \\pi $$  pour  $$ k \\in Z $$
