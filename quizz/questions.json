@@ -163,7 +163,7 @@
         ]
       },
       {
-        "question": " Identifiez les variables Iibres dans l'assertion suivante: $$ \\exists a \\in \\R, \\varnothing  ≠  \\left \\{b \\in \\R \\mid \\forall x \\in \\R, \\int_{y}^{x} \\frac{f(x t)+e^{-t}}{1+x^{2}+t^{2}} \\mathrm{~d} t \\leqslant b \\right \\} $$",
+        "question": " Identifiez les variables Iibres dans l'assertion suivante: $$ \\exists a \\in \\R, \\varnothing  \\text{≠}  \\left \\{b \\in \\R \\mid \\forall x \\in \\R, \\int_{y}^{x} \\frac{f(x t)+e^{-t}}{1+x^{2}+t^{2}} \\mathrm{~d} t \\leqslant b \\right \\} $$",
         "answers": [
           {"text": " $$ y $$ ", "correct": true},
           {"text": " $$ x $$ ", "correct": false},
