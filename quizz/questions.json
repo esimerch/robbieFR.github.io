@@ -172,7 +172,19 @@
           {"text": " $$ b $$ ", "correct": false},
           {"text": " $$ f $$ ", "correct": true}
         ]
+      },
+      {
+        "question": "$$ Soit x un nombre reel. Alors: $$",
+        "answers": [
+          {"text": " $$ y $$ ", "correct": true},
+          {"text": " $$ x $$ ", "correct": false},
+          {"text": " $$ a $$ ", "correct": false},
+          {"text": " $$ t $$", "correct": false},
+          {"text": " $$ b $$ ", "correct": false},
+          {"text": " $$ f $$ ", "correct": true}
+        ]
       }
+          
       ]
     }
   ]
