@@ -170,7 +170,7 @@
           {"text": " $$ a $$ ", "correct": false},
           {"text": " $$ t $$", "correct": false},
           {"text": " $$ b $$ ", "correct": false},
-          {"text": " $$ f $$ ", "correct": true}
+          {"text": " $$ f ≠  ̸̸̸̸̸̸̸̿̿= $$ ", "correct": true}
         ]
       }
       ]
