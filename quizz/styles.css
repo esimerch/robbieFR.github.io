@@ -83,25 +83,25 @@ body{
 }
 
 .index{
-  
   background: #7e74e2;
   color : #222 ;
-  height : "25px";
-  width : "25px";
-  border : "1px solid black";
-  border-radius : "10px";
+  height : 30px;
+  width : 30px;
+  border : 1px solid black;
+  border-radius : 12px;
   cursor : pointer;
+  transition : all 0.3s;
+  text-align: center;
   transition : all 0.3s;
 }
 
 .index:hover{
   background: #5b52bf;
   color : #FFF ;
-  height : "21px";
-  width : "28px";
-  border-radius : "20px";
-
-
+  height : 35px;
+  width : 35px;
+  border-radius : 15px;
+  transition : all 0.5s;
 }
 
 #index-btn{

@@ -3,6 +3,7 @@
 let currentQuestionIndex = 0;
 let score = 0;
 let questions;
+let tableVerite = [];
 
 // Load questions from the JSON file
 fetch('questions.json')
@@ -15,7 +16,13 @@ fetch('questions.json')
     console.log("Nb de questions : " + questions[0].content.length);
     showIndex();
     renderMathInElement(document.body);
+
+    for (let i = 0; i < questions[0].content.length; i++){
+      tableVerite[i] = -1;
+    }
+
     startQuizz(); // Call startQuizz only when questions are loaded
+
   })
   .catch(error => console.error("Error loading questions:", error));
 
@@ -62,8 +69,9 @@ function showQuestion(){
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
-    button.classList.add("btn")
+    button.classList.add("btn");
     answerButtons.appendChild(button);
+    //console.log(button);
     
     if (answer.text.match(/[\\]/g) != null){
       //console.log(answer.text.match(/[\\]/g).length); //logs 3
@@ -72,7 +80,7 @@ function showQuestion(){
         button.style.width = "100px";
       }else{
         button.style.width = "510px";
-        console.log("child");
+        //console.log("child");
       }
     };
 
@@ -98,23 +106,35 @@ function showIndex(){
     const index = document.createElement("button");
     index.innerHTML = " ‎ " + (i+1) + " ‎ " ;
     index.classList.add("index")
-    index.dataset.index = i + 1;
+    //index.dataset.index = i + 1;
+    //index.dataset.btn = "index-" + i;
+    var number = i;
+    index.setAttribute('id', number);
+
     indexButton.addEventListener("click", goToIdex);
 
 
-    index.style.height = "30px";
-    index.style.width = "30px";
-    index.style.border = "1px solid black";
-    index.style.borderRadius = "10px";
-
-
+    let currentQuestion = questions[0].content[currentQuestionIndex]; 
+    //console.log(currentQuestion + "  " + currentQuestionIndex );
     indexButton.appendChild(index);
   }
+}
+
+function colorIndex(){
+  for(let i=0; i <= questions[0].content.length ; i++ ){
+    var index = document.getElementById('0');
+    //console.log(index.id);
+    if (tableVerite[i]=-1){index.style.backgroundColor = "#7e74e2";}
+    //else{index.style.backgroundColor = "#FAF";}
+    //data-answer-btn = "btn-" + i;
+  }
+  //console.log(tableVerite);
   
 }
 
 function goToIdex(event){
-  const clickedButton = event.target;
+  const clickedButton = event.target
+  //console.log(clickedButton);
   var questionDemandee = parseInt(clickedButton.dataset.index, 10);
   currentQuestionIndex = questionDemandee -1
   showQuestion();
@@ -124,8 +144,8 @@ function goToIdex(event){
 
 function selectAnswer(e){
   var i=0;
-  console.log(e);
-  console.log(e.target.className);
+  //console.log(e);
+  //console.log(e.target.className);
   var location = e.target;
   //location = e.target;
   //console.log(location.className);
@@ -135,7 +155,7 @@ function selectAnswer(e){
   
   while( location.className != "btn" ){
     i=i+1;
-    console.log(i + " " + e.target.className);
+    //console.log(i + " " + e.target.className);
     location = location.parentElement;
   };
   
@@ -144,9 +164,12 @@ function selectAnswer(e){
   const isCorrect = selectedBtn.dataset.correct === "true";
   if(isCorrect){
     selectedBtn.classList.add("correct");
+    tableVerite[currentQuestionIndex]=1;
+    console.log(tableVerite);
     score++;
   }else{
     selectedBtn.classList.add("incorrect");
+    tableVerite[currentQuestionIndex]=0;
   }
   Array.from(answerButtons.children).forEach(button => {
     if(button.dataset.correct === "true"){
@@ -175,6 +198,7 @@ function handleNextButton(){
   currentQuestionIndex++;
   if(currentQuestionIndex < questions[0].content.length){
     showQuestion();
+    colorIndex()
   }else{
     showScore();
   }
