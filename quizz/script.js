@@ -84,6 +84,23 @@ function showQuestion(){
       }
     };
 
+    for (let i = 0; i < questions[0].content.length; i++ ){
+      var currentQuestion = document.getElementById(i);
+      console.log(currentQuestion);
+      if( i == currentQuestionIndex ){
+        currentQuestion.style.width = "35px";
+        currentQuestion.style.height = "35px";
+        currentQuestion.style.borderRadius = "15px";
+        currentQuestion.style.background = "#5b52bf";
+        currentQuestion.style.color = "#FFF";
+        currentQuestion.style.fontWeight = "bold";
+      }else{
+        currentQuestion.style.width = "30px";
+        currentQuestion.style.height = "30px";
+        currentQuestion.style.borderRadius = "12px";
+      }
+    }
+
     renderMathInElement(document.body);
     if(answer.correct){
       button.dataset.correct = answer.correct;
@@ -111,8 +128,6 @@ function showIndex(){
     var number = i;
     index.setAttribute('id', number);
 
-    indexButton.addEventListener("click", goToIdex);
-
 
     let currentQuestion = questions[0].content[currentQuestionIndex]; 
     //console.log(currentQuestion + "  " + currentQuestionIndex );
@@ -120,24 +135,11 @@ function showIndex(){
   }
 }
 
-function colorIndex(){
-  for(let i=0; i <= questions[0].content.length ; i++ ){
-    var index = document.getElementById('0');
-    //console.log(index.id);
-    if (tableVerite[i]=-1){index.style.backgroundColor = "#7e74e2";}
-    //else{index.style.backgroundColor = "#FAF";}
-    //data-answer-btn = "btn-" + i;
-  }
-  //console.log(tableVerite);
-  
-}
-
-function goToIdex(event){
-  const clickedButton = event.target
-  //console.log(clickedButton);
-  var questionDemandee = parseInt(clickedButton.dataset.index, 10);
-  currentQuestionIndex = questionDemandee -1
-  showQuestion();
+function colorIndex(index){
+  var button = document.getElementById(index);
+  if (tableVerite[index]== -1 ){button.style.backgroundColor = "#7e74e2";}
+  if (tableVerite[index]==  0 ){button.style.backgroundColor = "#ea9a9a";}
+  if (tableVerite[index]==  1 ){button.style.backgroundColor = "#9AEABC";}
 }
 
 
@@ -164,13 +166,16 @@ function selectAnswer(e){
   const isCorrect = selectedBtn.dataset.correct === "true";
   if(isCorrect){
     selectedBtn.classList.add("correct");
-    tableVerite[currentQuestionIndex]=1;
-    console.log(tableVerite);
+    tableVerite[currentQuestionIndex] = 1;
+    console.log("correct " + tableVerite)
     score++;
   }else{
     selectedBtn.classList.add("incorrect");
-    tableVerite[currentQuestionIndex]=0;
+    tableVerite[currentQuestionIndex] = 0;
+    console.log("incorrect " + tableVerite)
   }
+  console.log("colorindex " + tableVerite)
+  colorIndex(currentQuestionIndex);
   Array.from(answerButtons.children).forEach(button => {
     if(button.dataset.correct === "true"){
       button.classList.add("correct");
@@ -198,7 +203,6 @@ function handleNextButton(){
   currentQuestionIndex++;
   if(currentQuestionIndex < questions[0].content.length){
     showQuestion();
-    colorIndex()
   }else{
     showScore();
   }
@@ -209,6 +213,11 @@ nextButton.addEventListener("click", ()=>{
   if(currentQuestionIndex < questions[0].content.length){
     handleNextButton();
   }else{
+    for (let i=0; i<questions[0].content.length; i++){
+      var button = document.getElementById(i);
+      button.style.backgroundColor = "#7e74e2";
+    }
+    
     startQuizz();
   }
 });

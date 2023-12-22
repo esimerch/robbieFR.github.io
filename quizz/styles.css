@@ -93,6 +93,8 @@ body{
   transition : all 0.3s;
   text-align: center;
   transition : all 0.3s;
+  cursor : pointer;
+  font-weight: bold;
 }
 
 .index:hover{
