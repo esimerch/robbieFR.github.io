@@ -4,6 +4,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let questions;
 let tableVerite = [];
+let clicked = [];
 
 // Load questions from the JSON file
 fetch('questions.json')
@@ -34,18 +35,6 @@ const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const indexButton = document.getElementById("index-btn");
 
-/*
-skipButton.addEventListener("click", ()=>{                                       //debug
-  var questionDemandee = prompt("A quelle question voulez-vous aller ? (UN CHIFFRE SINON CA CRASH)");
-  questionDemandee = parseInt(questionDemandee);  //str to int
-  console.log(isNumber(questionDemandee));
-  if( isNumber(questionDemandee) ){
-    currentQuestionIndex = questionDemandee -1 ;  // -1 for the index (ie : question 4 is index 3)
-    showQuestion();
-  }
-});
-
-*/
 
 
 function renderMath() {
@@ -58,6 +47,8 @@ function startQuizz(){
   nextButton.innerHTML = "Next";
   showQuestion();  
 }
+
+
 //[0].content[0].answers[5]
 function showQuestion(){
   resetState();
@@ -75,7 +66,7 @@ function showQuestion(){
     
     if (answer.text.match(/[\\]/g) != null){
       //console.log(answer.text.match(/[\\]/g).length); //logs 3
-      var buttonSize = answer.text.match(/[\\]/g).length;
+      var buttonSize = answer.text.match(/[\\]/g).length;   // Plus de 2 backslash : longue case
       if(buttonSize<=4){
         button.style.width = "100px";
       }else{
@@ -86,7 +77,6 @@ function showQuestion(){
 
     for (let i = 0; i < questions[0].content.length; i++ ){
       var currentQuestion = document.getElementById(i);
-      console.log(currentQuestion);
       if( i == currentQuestionIndex ){
         currentQuestion.style.width = "35px";
         currentQuestion.style.height = "35px";
@@ -98,8 +88,15 @@ function showQuestion(){
         currentQuestion.style.width = "30px";
         currentQuestion.style.height = "30px";
         currentQuestion.style.borderRadius = "12px";
+        currentQuestion.style.color = "#FFF";
       }
     }
+
+    for (let i = 0; i < questions[0].content[currentQuestionIndex].answers.length; i++){
+      clicked[i] = 0;
+    }
+    
+    console.log(clicked);
 
     renderMathInElement(document.body);
     if(answer.correct){
@@ -115,7 +112,6 @@ function resetState(){
   while(answerButtons.firstChild){
     answerButtons.removeChild(answerButtons.firstChild);
   }
-
 }
 
 function showIndex(){
@@ -127,7 +123,6 @@ function showIndex(){
     //index.dataset.btn = "index-" + i;
     var number = i;
     index.setAttribute('id', number);
-
 
     let currentQuestion = questions[0].content[currentQuestionIndex]; 
     //console.log(currentQuestion + "  " + currentQuestionIndex );
@@ -146,43 +141,44 @@ function colorIndex(index){
 
 function selectAnswer(e){
   var i=0;
-  //console.log(e);
-  //console.log(e.target.className);
   var location = e.target;
-  //location = e.target;
-  //console.log(location.className);
-  //console.log(e.target.parentElement.className);
-  //console.log(e.target.parentElement.parentElement.className);
 
-  
   while( location.className != "btn" ){
     i=i+1;
-    //console.log(i + " " + e.target.className);
     location = location.parentElement;
   };
   
-
   const selectedBtn = location; //e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
-  if(isCorrect){
-    selectedBtn.classList.add("correct");
-    tableVerite[currentQuestionIndex] = 1;
-    console.log("correct " + tableVerite)
-    score++;
+  const isMultiple = questions[0].content[currentQuestionIndex].multipleAnswer === "true";
+  
+  if(isMultiple){
+    
+
+    nextButton.style.display = "block";
+    nextButton.innerText = "Valider";
+    selectedBtn.style.backgroundColor = "#010110"
   }else{
-    selectedBtn.classList.add("incorrect");
-    tableVerite[currentQuestionIndex] = 0;
-    console.log("incorrect " + tableVerite)
-  }
-  console.log("colorindex " + tableVerite)
-  colorIndex(currentQuestionIndex);
-  Array.from(answerButtons.children).forEach(button => {
-    if(button.dataset.correct === "true"){
-      button.classList.add("correct");
+    if(isCorrect){
+      selectedBtn.classList.add("correct");
+      tableVerite[currentQuestionIndex] = 1;
+      score++;
+    }else{
+      selectedBtn.classList.add("incorrect");
+      tableVerite[currentQuestionIndex] = 0;
     }
-    button.disabled = true;
-  });
+    colorIndex(currentQuestionIndex);
+    Array.from(answerButtons.children).forEach(button => {
+      if(button.dataset.correct === "true"){
+          button.classList.add("correct");
+      }
+      button.disabled = true;
+    });
   nextButton.style.display = "block";
+  nextButton.innerText = "Suivant";
+  }
+
+
 }
 
 function showScore(){
@@ -223,11 +219,6 @@ nextButton.addEventListener("click", ()=>{
 });
 
 
-function isNumber(value) {
-  return typeof value === 'number';
-}
-
-
 
 src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"    //func for rendering maths with katex
 function latex(){
@@ -238,4 +229,3 @@ function latex(){
     }
 });
 }
-
